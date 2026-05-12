@@ -27,6 +27,19 @@ SwiftUI macOS desktop app — interactive AI/ML demos for lectures and validatio
 open AIDemos.xcodeproj
 ```
 
+## Build and start on macOS
+
+```sh
+make macos-start
+```
+
+Additional targets:
+
+```sh
+make macos-build
+make clean
+```
+
 ## Related
 
 - [nuget-ai](https://github.com/Italbytz/nuget-ai) — C# / Blazor WASM counterpart
