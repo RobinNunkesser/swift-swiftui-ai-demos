@@ -66,7 +66,7 @@
 				A5000006 /* Views */,
 				A2000012 /* Assets.xcassets */,
 			);
-			path = "Sources/AIDemos";
+			path = "AIDemos/Sources/AIDemos";
 			name = AIDemos;
 			sourceTree = "<group>";
 		};
