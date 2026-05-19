@@ -42,5 +42,6 @@ make clean
 
 ## Related
 
+- [SwiftAICore](../../../packages/swift/spm-swift-ai-core/README.md) — reusable Swift ID3 core for the restaurant example
 - [nuget-ai](https://github.com/Italbytz/nuget-ai) — C# / Blazor WASM counterpart
 - [KI lecture slides](https://github.com/RobinNunkesser/md) — `md/quarto/ki/`
