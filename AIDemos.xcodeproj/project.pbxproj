@@ -19,6 +19,9 @@
 		A1000010 /* IrisKMeansView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000010 /* IrisKMeansView.swift */; };
 		A1000011 /* PerceptronView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000011 /* PerceptronView.swift */; };
 		A1000012 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A2000012 /* Assets.xcassets */; };
+		A1000013 /* RestaurantID3ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000013 /* RestaurantID3ViewModel.swift */; };
+		A1000014 /* RestaurantID3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000014 /* RestaurantID3View.swift */; };
+		A1000015 /* GraphPreviewWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A2000015 /* GraphPreviewWebView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +37,9 @@
 		A2000010 /* IrisKMeansView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IrisKMeansView.swift; sourceTree = "<group>"; };
 		A2000011 /* PerceptronView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PerceptronView.swift; sourceTree = "<group>"; };
 		A2000012 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A2000013 /* RestaurantID3ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantID3ViewModel.swift; sourceTree = "<group>"; };
+		A2000014 /* RestaurantID3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RestaurantID3View.swift; sourceTree = "<group>"; };
+		A2000015 /* GraphPreviewWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GraphPreviewWebView.swift; sourceTree = "<group>"; };
 		A3000001 /* AIDemos.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AIDemos.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -94,6 +100,7 @@
 				A2000006 /* XorNeuralNetViewModel.swift */,
 				A2000007 /* IrisKMeansViewModel.swift */,
 				A2000008 /* PerceptronViewModel.swift */,
+				A2000013 /* RestaurantID3ViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -104,6 +111,8 @@
 				A2000009 /* XorNeuralNetView.swift */,
 				A2000010 /* IrisKMeansView.swift */,
 				A2000011 /* PerceptronView.swift */,
+				A2000014 /* RestaurantID3View.swift */,
+				A2000015 /* GraphPreviewWebView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -122,6 +131,9 @@
 			buildRules = (
 			);
 			dependencies = (
+			);
+			packageProductDependencies = (
+				A6000002 /* SwiftAICore */,
 			);
 			name = AIDemos;
 			productName = AIDemos;
@@ -153,6 +165,9 @@
 				Base,
 			);
 			mainGroup = A5000001;
+			packageReferences = (
+				A9000002 /* SwiftAICore */,
+			);
 			productRefGroup = A5000003 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -189,9 +204,27 @@
 				A1000009 /* XorNeuralNetView.swift in Sources */,
 				A1000010 /* IrisKMeansView.swift in Sources */,
 				A1000011 /* PerceptronView.swift in Sources */,
+				A1000013 /* RestaurantID3ViewModel.swift in Sources */,
+				A1000014 /* RestaurantID3View.swift in Sources */,
+				A1000015 /* GraphPreviewWebView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+
+/* Begin XCLocalSwiftPackageReference section */
+		A9000002 /* SwiftAICore */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = "../../../../artifacts/packages/swift/spm-swift-ai-core";
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A6000002 /* SwiftAICore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A9000002 /* SwiftAICore */;
+			productName = SwiftAICore;
+		};
+/* End XCSwiftPackageProductDependency section */
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
