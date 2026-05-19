@@ -4,6 +4,7 @@ enum Demo: String, CaseIterable, Identifiable {
     case xorNeuralNet = "XOR Neural Net"
     case irisKMeans   = "Iris k-Means"
     case perceptron   = "Perceptron"
+    case restaurantID3 = "Restaurant ID3"
 
     var id: String { rawValue }
 
@@ -12,6 +13,7 @@ enum Demo: String, CaseIterable, Identifiable {
         case .xorNeuralNet: return "brain.head.profile"
         case .irisKMeans:   return "circles.hexagongrid"
         case .perceptron:   return "network"
+        case .restaurantID3: return "fork.knife"
         }
     }
 
@@ -20,6 +22,7 @@ enum Demo: String, CaseIterable, Identifiable {
         case .xorNeuralNet: return "Deep Learning"
         case .irisKMeans:   return "Unsupervised Learning"
         case .perceptron:   return "Linear Classifier"
+        case .restaurantID3: return "Decision Tree Learning"
         }
     }
 }
@@ -29,14 +32,18 @@ struct ContentView: View {
 
     var body: some View {
         NavigationSplitView {
-            List(Demo.allCases, selection: $selectedDemo) { demo in
-                Label {
-                    VStack(alignment: .leading, spacing: 2) {
-                        Text(demo.rawValue).fontWeight(.medium)
-                        Text(demo.topic).font(.caption).foregroundStyle(.secondary)
+            List(selection: $selectedDemo) {
+                ForEach(Demo.allCases) { demo in
+                    NavigationLink(value: demo) {
+                        Label {
+                            VStack(alignment: .leading, spacing: 2) {
+                                Text(demo.rawValue).fontWeight(.medium)
+                                Text(demo.topic).font(.caption).foregroundStyle(.secondary)
+                            }
+                        } icon: {
+                            Image(systemName: demo.icon)
+                        }
                     }
-                } icon: {
-                    Image(systemName: demo.icon)
                 }
             }
             .navigationSplitViewColumnWidth(min: 200, ideal: 220)
@@ -49,6 +56,8 @@ struct ContentView: View {
                 IrisKMeansView()
             case .perceptron:
                 PerceptronView()
+            case .restaurantID3:
+                RestaurantID3View()
             case nil:
                 Text("Bitte ein Demo auswählen")
                     .foregroundStyle(.secondary)
